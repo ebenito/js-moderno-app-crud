@@ -1,6 +1,79 @@
 
 table {
-    background-color: rgba(0, 0, 0, 0.348);
-    border-radius: 5px;
-    padding: 5px;
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e7ff;
+}
+
+thd,
+td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+thead {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e7ff;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(99, 102, 241, 0.05);
+    transform: scale(1.01);
+    box-shadow: inset 0 0 15px rgba(99, 102, 241, 0.1);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    color: #1a1a2e;
+}
+
+/* Estilos para botones dentro de la tabla */
+table button {
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+    
+    thd,
+    td {
+        padding: 12px 10px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    table {
+        background: rgba(26, 34, 58, 0.8);
+        border-color: #3730a3;
+    }
+    
+    tbody tr {
+        border-bottom-color: #3730a3;
+    }
+    
+    tbody tr:hover {
+        background-color: rgba(129, 140, 248, 0.1);
+    }
+    
+    td {
+        color: #e8e8ff;
+    }
 }

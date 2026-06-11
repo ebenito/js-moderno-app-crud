@@ -2,6 +2,54 @@
 
 .fab-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    transition: all 0.3s ease;
+    z-index: 100;
+    font-family: inherit;
+    text-align: center;
+    line-height: 1;
+}
+
+.fab-button:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
+}
+
+.fab-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .fab-button {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .fab-button {
+        background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+        box-shadow: 0 8px 25px rgba(129, 140, 248, 0.4);
+    }
+    
+    .fab-button:hover {
+        box-shadow: 0 12px 35px rgba(129, 140, 248, 0.5);
+    }
 }
